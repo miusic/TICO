@@ -22,6 +22,6 @@ fi
 
 echo "[download-release-asset] Downloading from: $DOWNLOAD_URL"
 curl -L -o "$FILENAME" "$DOWNLOAD_URL"
-echo "filename=$FILENAME" >> "$GITHUB_OUTPUT"
+echo "filename=$FILENAME" >> $GITHUB_OUTPUT
 
 echo "[download-release-asset] End"

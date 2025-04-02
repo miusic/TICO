@@ -18,13 +18,11 @@ inputs:
 outputs:
   filename:
     description: The downloaded file name
-    value: ${{ steps.download-step.outputs.filename }}
 
 runs:
   using: composite
   steps:
     - shell: bash
-      id: download-step
       run: |
         chmod +x ${{ github.action_path }}/entrypoint.sh
         ${{ github.action_path }}/entrypoint.sh     \
